@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Lab3Master.Master.cs" Inherits="Greenhalgh_Lab_1.Lab1Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Gatlin Greenhalgh and Conrad Lauman</title>
+    <style type="text/css">
+        body{
+            background-color:#ffedbd;
+        }
+        #menuNavigation{
+            font:bold;
+            text-decoration:underline;
+        }
+
+        }
+        
+
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Gatlin Greenhalgh and Conrad Lauman -->
+            <!-- Create the navigation bar and assugn Urls -->
+            <asp:Menu ID="menuNavigation" runat="server" Orientation="Horizontal">
+                <Items>
+                    
+                    <asp:MenuItem Text="Home" Value="HomePage" NavigateUrl="Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Login" Value="HomePage" NavigateUrl="LoginPage.aspx"></asp:MenuItem>
+                </Items>
+
+<StaticMenuItemStyle HorizontalPadding="16px"></StaticMenuItemStyle>
+
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer>
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="lblLoggedInUser" runat="server" Text=""></asp:Label></footer>
+
+</body>
+</html>

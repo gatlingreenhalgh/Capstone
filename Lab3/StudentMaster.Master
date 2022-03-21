@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMaster.master.cs" Inherits="Lab2.StudentMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Gatlin Greenhalgh and Conrad Lauman</title>
+    <style type="text/css">
+        body{
+            background-color:#ffedbd;
+        }
+        #menuNavigation{
+            float: none;
+            position: absolute;
+            left: 39%;
+            font:bold;
+            text-decoration:underline;
+        }
+
+        }
+        
+
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Gatlin Greenhalgh and Conrad Lauman -->
+            <!-- Create the navigation bar and assugn Urls -->
+            <asp:Menu ID="menuNavigation" runat="server" Orientation="Horizontal">
+                <Items>
+                    
+                    <asp:MenuItem Text="Home" Value="HomePage" NavigateUrl="Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Student" Value="EditStudent">
+                        <asp:MenuItem Text="Edit Profile" Value="EditStudent" NavigateUrl="EditIndividualStudent.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Upload Resume" Value="Resume" NavigateUrl="UploadPDF.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                        <asp:MenuItem Text="Jobs" Value="Jobs">
+                            <asp:MenuItem Text="Posted Jobs" Value="Posted Jobs" NavigateUrl="PostedJobs.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    <asp:MenuItem Text="Scholarships" Value="ScholarshipsPage">
+                        <asp:MenuItem Text="Available Scholarships" Value="Available Scholarships" NavigateUrl="Scholarships.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Log Out" Value="HomePage" NavigateUrl="LogOut.aspx"></asp:MenuItem>
+                </Items>
+
+<StaticMenuItemStyle HorizontalPadding="16px"></StaticMenuItemStyle>
+
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer>
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="lblLoggedInUser" runat="server" Text=""></asp:Label></footer>
+</body>
+</html>

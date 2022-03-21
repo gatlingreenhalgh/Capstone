@@ -1,0 +1,66 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MemberMaster.Master" AutoEventWireup="true" CodeBehind="EditMember.aspx.cs" Inherits="Lab2.EditMember" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--Create header, labels and buttons-->
+     <h1>Edit Profile</h1>
+    <asp:Button ID="btnViewInfo" runat="server" Text="View Info" OnClick="btnViewInfo_Click" CausesValidation="false"/>
+    <br />
+    <br />
+    <asp:Label ID="lblMemberFirstName" runat="server" Text="First Name"></asp:Label>
+        <asp:TextBox ID="txtMemberFirstName" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberFirstName" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate = "txtMemberFirstName" ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+    <asp:Label ID="lblMemberLastName" runat="server" Text="Last Name"></asp:Label>
+        <asp:TextBox ID="txtMemberLastName" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberLastName" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate="txtMemberLastName"  ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+    <asp:Label ID="lblMemberEmail" runat="server" Text="Email Address"></asp:Label>
+        <asp:TextBox ID="txtMemberEmail" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberEmail" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate ="txtMemberEmail"  ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+    <asp:Label ID="lblMemberPhone" runat="server" Text="Phone Number"></asp:Label>
+        <asp:TextBox ID="txtMemberPhone" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberPhone" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate ="txtMemberPhone"  ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+    <asp:Label ID="lblMemberGradYear" runat="server" Text="Graduation Year"></asp:Label>
+        <asp:TextBox ID="txtMemberGradYear" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberGradYear" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate ="txtMemberGradYear"  ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+    <asp:Label ID="lblMemberTitle" runat="server" Text="Member Title"></asp:Label>
+        <asp:TextBox ID="txtMemberTitle" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator 
+        ID="rfvMemberTitle" runat="server" ErrorMessage="RequiredFieldValidator" 
+        ControlToValidate ="txtMemberTitle"  ForeColor="Red" Text="Cannot be blank"
+        ></asp:RequiredFieldValidator>
+        <br />
+        <br />
+        <br />
+        <!-- Create the buttons -->
+        <asp:Button ID="btnMemberUpdate" runat="server" Text="Update Member Record" Height="36px" AutoPostBack="true" OnClick="btnMemberUpdate_Click"/>
+</asp:Content>

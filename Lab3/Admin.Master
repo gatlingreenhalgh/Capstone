@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Lab3.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color:#ffedbd;
+        }
+        #menuNavigation{
+            float: none;
+            position: absolute;
+            left: 33%;
+            font:bold;
+            text-decoration:underline;
+        }
+
+        }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Gatlin Greenhalgh and Conrad Lauman -->
+            <!-- Create the navigation bar and assugn Urls -->
+            <asp:Menu ID="menuNavigation" runat="server" Orientation="Horizontal">
+                <Items>
+                    
+                    <asp:MenuItem Text="Home" Value="HomePage" NavigateUrl="Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Student" Value="StudentPage" >
+                        <asp:MenuItem Text="Add Student" Value="Add Students" NavigateUrl="Student.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="New Student Accounts" Value="New Students" NavigateUrl="AcceptStudents.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="View Students Info" Value="View Students" NavigateUrl="ViewStudents.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="Edit Students" Value="Edit Students" NavigateUrl="EditStudents.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Member" Value="MemberPage">
+                        <asp:MenuItem Text="Add Member" Value="Add Member" NavigateUrl="Member.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="New Member Accounts" Value="New Member" NavigateUrl="AcceptMembers.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="Edit Members" Value="Edit Member" NavigateUrl="EditMembersAdmin.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Mentorship" Value="MentorshipPage">
+                        <asp:MenuItem Text="Create Mentorship" Value="CreateMentorshipPage" NavigateUrl="Mentorship.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="View Existing Mentorship" Value="ViewExistingMentorshipPage" NavigateUrl="ExistingMentorship.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Company" Value="CompanyPage">
+                        <asp:MenuItem Text="New Company" Value="New Company" NavigateUrl="Company.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Jobs" Value="Jobs">
+                            <asp:MenuItem Text="New Job" Value="New Job" NavigateUrl="NewJob.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Posted Jobs" Value="Posted Jobs" NavigateUrl="PostedJobs.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Scholarships" Value="ScholarshipsPage">
+                        <asp:MenuItem Text="New Scholarship" Value="New Scholarship" NavigateUrl="NewScholarship.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Available Scholarships" Value="Available Scholarships" NavigateUrl="Scholarships.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Application Review" Value="Application Review" NavigateUrl="ApplicationReview.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Scholarship Decisions" Value="Scholarship Decisions" NavigateUrl="AwardedScholarships.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Log Out" Value="HomePage" NavigateUrl="LogOut.aspx"></asp:MenuItem>
+                </Items>
+
+<StaticMenuItemStyle HorizontalPadding="16px"></StaticMenuItemStyle>
+
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer>
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="lblLoggedInUser" runat="server" Text=""></asp:Label></footer>
+</body>
+</html>
